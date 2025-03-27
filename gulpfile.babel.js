@@ -59,7 +59,7 @@ const PRODUCTION = yargs.argv.prod;
 export const serve = (done) => {
   server.init({
     // Update this to your actual WordPress development URL
-    proxy: "http://localhost:10085/",
+    proxy: "http://localhost:3002/",
     open: false,
   });
   done();
@@ -136,7 +136,7 @@ export const compress = () => {
 
 export const watch = () => {
   // Watch SCSS files
-  gulp.watch("src/assets/scss/**/*.scss", gulp.series(styles));
+  gulp.watch("sass/**/*.scss", gulp.series(styles, reload));
 
   // Watch JavaScript files
   gulp.watch("js/**/*.js", gulp.series(scripts, reload));

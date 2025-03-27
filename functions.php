@@ -141,9 +141,9 @@ add_action( 'widgets_init', 'bat_bistro_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bat_bistro_scripts() {
-	wp_enqueue_style( 'bat_bistro-style', get_template_directory_uri() . '/css/bundle.css', array(), _S_VERSION );
+	wp_enqueue_style( 'bat_bistro-style', get_template_directory_uri() . '/dist/assets/css/style.css', array(), _S_VERSION );
 	
-	wp_enqueue_script( 'bat_bistro-script', get_template_directory_uri() . '/js/bundle.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'bat_bistro-script', get_template_directory_uri() . '/dist/assets/js/bundle.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
