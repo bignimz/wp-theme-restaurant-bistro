@@ -1,0 +1,16 @@
+.site-footer {
+  background-color: #222;
+  padding: 10px 0px;
+
+  .site-info {
+    text-align: center;
+    color: #fff;
+    a {
+      text-decoration: none;
+      color: #fff;
+      &:hover {
+        color: orangered;
+      }
+    }
+  }
+}
